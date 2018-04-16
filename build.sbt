@@ -9,9 +9,8 @@ lazy val root = (project in file(".")).
     )),
     name := "Hello Scala Servlet",
     libraryDependencies ++= Seq(
-      scalaTest % Test,
       servletApi
     ),
   )
 
-enablePlugins(ScalatraPlugin)
+enablePlugins(JettyPlugin)
