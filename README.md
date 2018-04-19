@@ -1,4 +1,4 @@
-# Hello World servlet app sample for scala
+# Hello servlet
 
 Scalaで書かれたServletベースのHello Worldサンプルアプケーションです。
 
