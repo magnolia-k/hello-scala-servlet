@@ -10,21 +10,14 @@ class HelloServlet extends HttpServlet {
 
       res.setContentType("text/html")
 
-      val name = Option(req.getParameter("name")) match {
-        case None    => "Wolrd"
-        case Some(p) => p
-      }
-
+      val name = Option(req.getParameter("name")).getOrElse("World")
       val out = res.getWriter
-      out.println("<!DOCTYPE html>")
-      out.println("<html><body>")
+
+      out.println("<!DOCTYPE html><html><body>")
       out.println(s"<h1>Hello, $name")
       out.println("</body></html>")
-
     } else {
-
       res.sendError(HttpServletResponse.SC_NOT_FOUND)
-
     }
   }
 }
